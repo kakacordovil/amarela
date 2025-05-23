@@ -1,5 +1,5 @@
 # 200anos
-Vamos diminuir o tempo expectável para a e qualidade no mercado de trabalho
+Vamos diminuir o tempo expectável para a equidade no mercado de trabalho
 
 
 ## Serviços por Mulheres
