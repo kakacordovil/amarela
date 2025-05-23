@@ -10,7 +10,7 @@ Essa é uma lista aberta e comunitária de serviços prestados por mulheres. A i
 Dar visibilidade a mulheres empreendedoras, freelancers e profissionais autônomas, para que possamos nos apoiar e contratar umas às outras.
 
 ### Como contribuir
-Basta seguir o guia no arquivo [contribuir.md](contribuir.md) ou abrir uma issue com os dados da profissional.
+Basta seguir o guia no arquivo [contribute.md](contribute.md) ou abrir uma issue com os dados da profissional.
 
 ### Licença
 MIT – este projeto é livre para uso e adaptação.
