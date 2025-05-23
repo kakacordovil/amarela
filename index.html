@@ -1,40 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Serviços por Mulheres</title>
-  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-4 text-center">Serviços prestados por mulheres</h1>
+    <p class="text-center mb-6 text-gray-600">Apoie e contrate mulheres incríveis. Use o campo de busca ou filtre por categoria.</p>
 
-  <h3>exemplos</h3>
+    <input type="text" id="search" placeholder="Buscar por nome ou serviço..." class="w-full px-4 py-2 mb-6 border rounded shadow-sm" />
 
-  <h1>Serviços prestados por mulheres</h1>
-  <p>Uma lista comunitária para apoiar e contratar mulheres incríveis.</p>
+    <div id="cards" class="grid gap-4 sm:grid-cols-2">
+      <!-- Cards serão inseridos aqui via JavaScript -->
+    </div>
 
-  <section>
-    <h2>Design e Artes</h2>
-    <ul>
-      <li><strong>Ana Lima</strong> – Designer gráfica. <a href="https://instagram.com/ana.design">Instagram</a></li>
-    </ul>
-  </section>
+    <div class="flex justify-center mt-8 space-x-2" id="pagination">
+      <!-- Botões de paginação aqui -->
+    </div>
 
-  <section>
-    <h2>Estética e Bem-estar</h2>
-    <ul>
-      <li><strong>Maria Souza</strong> – Esteticista. <a href="https://linktr.ee/mariaestetica">Linktree</a></li>
-    </ul>
-  </section>
+    <footer class="mt-12 text-center text-sm text-gray-500">
+      <p>Quer adicionar alguém? Veja como <a href="contribuir.md" class="text-blue-500 underline">aqui</a>.</p>
+    </footer>
+  </div>
 
-  <section>
-    <h2>Consultoria e Educação</h2>
-    <ul>
-      <li><strong>Joana Ferreira</strong> – Professora de francês. <a href="https://joanalanguages.com">Site</a></li>
-    </ul>
-  </section>
+  <script>
+    const services = [
+      { name: "Ana Lima", service: "Designer gráfica", category: "Design", link: "https://instagram.com/ana.design" },
+      { name: "Maria Souza", service: "Esteticista", category: "Estética", link: "https://linktr.ee/mariaestetica" },
+      { name: "Joana Ferreira", service: "Professora de francês", category: "Educação", link: "https://joanalanguages.com" },
+      { name: "Camila Rocha", service: "Psicóloga", category: "Saúde", link: "https://linktr.ee/camilapsi" },
+      { name: "Fernanda Dias", service: "Consultora de imagem", category: "Consultoria", link: "https://instagram.com/fernanda.consult" },
+      { name: "Patrícia Oliveira", service: "Chef de cozinha", category: "Culinária", link: "https://patriciachef.com" }
+    ];
 
-  <footer>
-    <p>Quer adicionar alguém? Veja como <a href="contribute.md">aqui</a>.</p>
-  </footer>
+    const cardsContainer = document.getElementById("cards");
+    const searchInput = document.getElementById("search");
+    const paginationContainer = document.getElementById("pagination");
+
+    let currentPage = 1;
+    const itemsPerPage = 4;
+
+    function renderCards(filtered) {
+      cardsContainer.innerHTML = "";
+      const start = (currentPage - 1) * itemsPerPage;
+      const paginated = filtered.slice(start, start + itemsPerPage);
+
+      for (const item of paginated) {
+        const card = document.createElement("div");
+        card.className = "bg-white p-4 rounded shadow";
+        card.innerHTML = `
+          <h3 class="text-lg font-semibold">${item.name}</h3>
+          <p class="text-sm text-gray-600">${item.service} (${item.category})</p>
+          <a href="${item.link}" target="_blank" class="text-blue-500 hover:underline text-sm">Contato</a>
+        `;
+        cardsContainer.appendChild(card);
+      }
+    }
+
+    function renderPagination(totalItems) {
+      paginationContainer.innerHTML = "";
+      const totalPages = Math.ceil(totalItems / itemsPerPage);
+      for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement("button");
+        btn.textContent = i;
+        btn.className = `px-3 py-1 border rounded ${i === currentPage ? 'bg-blue-500 text-white' : 'bg-white text-gray-700'}`;
+        btn.onclick = () => {
+          currentPage = i;
+          updateDisplay();
+        };
+        paginationContainer.appendChild(btn);
+      }
+    }
+
+    function updateDisplay() {
+      const query = searchInput.value.toLowerCase();
+      const filtered = services.filter(s => s.name.toLowerCase().includes(query) || s.service.toLowerCase().includes(query));
+      renderCards(filtered);
+      renderPagination(filtered.length);
+    }
+
+    searchInput.addEventListener("input", () => {
+      currentPage = 1;
+      updateDisplay();
+    });
+
+    updateDisplay();
+  </script>
 </body>
 </html>
