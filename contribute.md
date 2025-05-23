@@ -11,7 +11,7 @@ Edite o arquivo `index.html` e adicione uma nova `<li>` com:
 Exemplo:
 ```html
 <li><strong>Camila Rocha</strong> – Psicóloga. <a href="https://linktr.ee/camilapsi">Linktree</a></li>
-
+```
 
 ### 2. Abrindo uma Issue
 Se não sabe como editar o código, crie uma *issue* com:
@@ -20,4 +20,4 @@ Se não sabe como editar o código, crie uma *issue* com:
 - Link para contato
 
 ### 3. Enviando via redes sociais
-Você também pode marcar a autora do projeto com sugestões.
+Você também pode marcar Kaká Cordovil no LinkedIn, ou @error418.code no Instagram com sugestões.
