@@ -41,14 +41,45 @@
 
   <script>
     const services = [
-      { name: "Itallie Hanna", service: "Designer, Branding, Direção de arte", category: "Design", link: "https://instagram.com/studiocupuacu" },
-      { name: "Isabel Cordovil", service: "Esteticista", category: "Estética", link: "https://instagram.com/belcordovil" },
-      { name: "Isabelle", service: "Professora de francês", category: "Educação", link: "https://instagram.com/isa.elleflow" },
-      { name: "Olga Garcia", service: "Tatuadora", category: "Tattoo", link: "https://instagram.com/olgarcia.arte" }
+      {
+        name: "Itallie Hanna",
+        service: "Designer, Branding, Direção de arte",
+        category: "Design",
+        location: "Portugal",
+        atendimento: "Online",
+        link: "https://instagram.com/studiocupuacu"
+      },
+      {
+        name: "Isabel Cordovil",
+        service: "Esteticista",
+        category: "Estética",
+        location: "Belém PA, Brasil",
+        atendimento: "Presencial",
+        link: "https://instagram.com/belcordovil"
+      },
+      {
+        name: "Isabelle",
+        service: "Professora de francês",
+        category: "Educação",
+        location: "França",
+        atendimento: "Online",
+        link: "https://instagram.com/isa.elleflow"
+      },
+      {
+        name: "Olga Garcia",
+        service: "Tatuadora",
+        category: "Tattoo",
+        location: "Brasil",
+        atendimento: "Presencial",
+        link: "https://instagram.com/olgarcia.arte"
+      }
+    
     ];
 
     const cardsContainer = document.getElementById("cards");
     const searchInput = document.getElementById("search");
+    const filterCategory = document.getElementById("filterCategory");
+    const sortBy = document.getElementById("sortBy");
     const paginationContainer = document.getElementById("pagination");
 
     let currentPage = 1;
@@ -65,12 +96,14 @@
         card.innerHTML = `
           <h3 class="text-lg font-semibold">${item.name}</h3>
           <p class="text-sm text-gray-600">${item.service} (${item.category})</p>
+          <p class="text-sm text-gray-600"><strong>Local:</strong> ${item.location}</p>
+          <p class="text-sm text-gray-600"><strong>Atendimento:</strong> ${item.atendimento}</p>
           <a href="${item.link}" target="_blank" class="text-blue-500 hover:underline text-sm">Me encontre aqui</a>
         `;
         cardsContainer.appendChild(card);
       }
     }
-
+   
     function renderPagination(totalItems) {
       paginationContainer.innerHTML = "";
       const totalPages = Math.ceil(totalItems / itemsPerPage);
@@ -88,12 +121,39 @@
 
     function updateDisplay() {
       const query = searchInput.value.toLowerCase();
-      const filtered = services.filter(s => s.name.toLowerCase().includes(query) || s.service.toLowerCase().includes(query));
+      const selectedCategory = filterCategory.value;
+      const order = sortBy.value;
+
+      let filtered = services.filter(s =>
+        s.name.toLowerCase().includes(query) ||
+        s.service.toLowerCase().includes(query)
+      );
+
+      if (selectedCategory) {
+        filtered = filtered.filter(s => s.category === selectedCategory);
+      }
+
+      filtered.sort((a, b) => {
+        return order === "az"
+          ? a.name.localeCompare(b.name)
+          : b.name.localeCompare(a.name);
+      });
+
       renderCards(filtered);
       renderPagination(filtered.length);
     }
 
     searchInput.addEventListener("input", () => {
+      currentPage = 1;
+      updateDisplay();
+    });
+
+    filterCategory.addEventListener("change", () => {
+      currentPage = 1;
+      updateDisplay();
+    });
+
+    sortBy.addEventListener("change", () => {
       currentPage = 1;
       updateDisplay();
     });
