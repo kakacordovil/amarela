@@ -11,7 +11,20 @@
     <h1 class="text-3xl font-bold mb-4 text-center">Serviços prestados por mulheres</h1>
     <p class="text-center mb-6 text-gray-600">Apoie e contrate mulheres incríveis. Use o campo de busca ou filtre por categoria.</p>
 
-    <input type="text" id="search" placeholder="Buscar por nome ou serviço..." class="w-full px-4 py-2 mb-6 border rounded shadow-sm" />
+    <div class="flex flex-col sm:flex-row gap-4 mb-6">
+      <input type="text" id="search" placeholder="Buscar por nome ou serviço..." class="w-full px-4 py-2 border rounded shadow-sm" />
+      <select id="filterCategory" class="px-4 py-2 border rounded shadow-sm">
+        <option value="">Todas as categorias</option>
+        <option value="Design">Design</option>
+        <option value="Estética">Estética</option>
+        <option value="Educação">Educação</option>
+        <option value="Tattoo">Tattoo</option>
+      </select>
+      <select id="sortBy" class="px-4 py-2 border rounded shadow-sm">
+        <option value="az">A-Z</option>
+        <option value="za">Z-A</option>
+      </select>
+    </div>
 
     <div id="cards" class="grid gap-4 sm:grid-cols-2">
       <!-- Cards serão inseridos aqui via JavaScript -->
