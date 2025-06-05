@@ -1,23 +1,27 @@
-# Como contribuir
+# Como contribuir com a AmarEla 💛
 
-Você pode contribuir com essa lista de três formas:
+Você pode contribuir com essa lista de **serviços prestados por mulheres** de três formas:
 
-### 1. Criando uma Pull Request
-Edite o arquivo `index.html` e adicione uma nova `<li>` com:
-- Nome da profissional
-- O que ela faz
-- Link para contato (Instagram, site, Linktree...)
+---
 
-Exemplo:
-```html
-<li><strong>Camila Rocha</strong> – Psicóloga. <a href="https://linktr.ee/camilapsi">Linktree</a></li>
-```
+### ✨ 1. Usando o formulário (mais fácil!)
 
-### 2. Abrindo uma Issue
-Se não sabe como editar o código, crie uma *issue* com:
-- Nome
-- Profissão
-- Link para contato
+Se você quiser indicar uma mulher incrível, preencha o formulário na nossa página principal. Ele já envia as informações e cria um Pull Request automático para a lista!
 
-### 3. Enviando via redes sociais
-Você também pode marcar Kaká Cordovil no LinkedIn, ou @error418.code no Instagram com sugestões.
+➡️ [Clique aqui para ir direto ao formulário](https://amarela.vercel.app/#formarelo)
+
+---
+
+### 🛠️ 2. Criando uma Pull Request manualmente
+
+Se preferir, você pode editar o arquivo `data/services.json` e adicionar os dados assim:
+
+```json
+{
+  "name": "Camila Rocha",
+  "service": "Psicóloga",
+  "category": "Psicologia",
+  "location": "São Paulo, Brasil",
+  "atendimento": "Online",
+  "link": "https://linktr.ee/camilapsi"
+}
