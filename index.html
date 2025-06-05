@@ -5,18 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AmarEla</title>
   <script src="https://cdn.tailwindcss.com"></script>
-
   <script>
     tailwind.config = {
-      darkMode: 'class', // isso ativa o modo escuro por classe
+      darkMode: 'class',
     }
   </script>
-
 </head>
 <body class="bg-gray-50 text-gray-800">
   <div class="max-w-4xl mx-auto px-4 py-8">
     <h1 class="text-3xl font-bold mb-4 text-center">AmarEla - a lista de serviço e empresas de mulheres</h1>
-    <p class="text-center mb-6 text-gray-600">Serviços prestados por mulheres. Apoie e contrate mulheres incríveis. </br> Use o campo de busca ou filtre por categoria.</p>
+    <p class="text-center mb-6 text-gray-600">
+      Serviços prestados por mulheres. Apoie e contrate mulheres incríveis. <br>
+      Use o campo de busca ou filtre por categoria.
+    </p>
 
     <!-- Barra de busca + filtros -->
     <div class="flex flex-col sm:flex-row gap-4 mb-6">
@@ -26,7 +27,7 @@
         <option value="Design">Design</option>
         <option value="Estética">Estética</option>
         <option value="Educação">Educação</option>
-        <option value="Tattoo">Pastelaria</option>
+        <option value="Confeitaria">Confeitaria</option>
         <option value="Tattoo">Tattoo</option>
       </select>
       <select id="locationFilter" class="px-4 py-2 border rounded shadow-sm">
@@ -41,19 +42,34 @@
       </select>
     </div>
 
-    <div id="cards" class="grid gap-4 sm:grid-cols-2">
-      <!-- Cards serão inseridos aqui via JavaScript -->
-    </div>
+    <!-- Cards -->
+    <div id="cards" class="grid gap-4 sm:grid-cols-2"></div>
 
-    <div class="flex justify-center mt-8 space-x-2" id="pagination">
-      <!-- Botões de paginação aqui -->
-    </div>
+    <!-- Paginação -->
+    <div class="flex justify-center mt-8 space-x-2" id="pagination"></div>
 
+    <!-- Formulário para adicionar nova prestadora -->
+    <section class="max-w-xl mx-auto my-10 p-6 bg-white rounded shadow">
+      <h2 class="text-2xl font-bold mb-4">Adicionar novo serviço</h2>
+      <form id="addForm" class="space-y-4">
+        <input type="text" name="name" placeholder="Nome completo" class="w-full px-4 py-2 border rounded" required>
+        <input type="text" name="service" placeholder="Serviço oferecido" class="w-full px-4 py-2 border rounded" required>
+        <input type="text" name="category" placeholder="Categoria (ex: Educação, Design)" class="w-full px-4 py-2 border rounded" required>
+        <input type="text" name="location" placeholder="Local" class="w-full px-4 py-2 border rounded" required>
+        <input type="text" name="atendimento" placeholder="Atendimento (Online ou Presencial)" class="w-full px-4 py-2 border rounded" required>
+        <input type="url" name="link" placeholder="Link do Instagram ou site" class="w-full px-4 py-2 border rounded" required>
+        <button type="submit" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">Enviar</button>
+      </form>
+      <p id="successMessage" class="text-green-600 mt-4 hidden">Enviado com sucesso! Obrigada 💛</p>
+    </section>
+
+    <!-- Rodapé -->
     <footer class="mt-12 text-center text-sm text-gray-500">
       <p>Quer adicionar alguém? Veja como <a href="contribute.md" class="text-yellow-500 underline">aqui</a>.</p>
     </footer>
   </div>
 
+  <!-- Script de lógica dos cards -->
   <script>
     const services = [
       {
@@ -120,7 +136,7 @@
           <p class="text-sm text-gray-600">${item.service} (${item.category})</p>
           <p class="text-sm text-gray-600"><strong>Local:</strong> ${item.location}</p>
           <p class="text-sm text-gray-600"><strong>Atendimento:</strong> ${item.atendimento}</p>
-          <a href="${item.link}" target="_blank" class="text-yellow-500 hover:underline text-sm">Me encontre aqui</a>
+          <a href="${item.link}" target="_blank" class="text-yellow-600 hover:underline text-sm">Me encontre aqui</a>
         `;
         cardsContainer.appendChild(card);
       }
@@ -181,6 +197,28 @@
     });
 
     updateDisplay();
+  </script>
+
+  <!-- Script do formulário -->
+  <script>
+    document.getElementById("addForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const formData = Object.fromEntries(new FormData(this).entries());
+
+      const response = await fetch("https://200anos.vercel.app/api/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        document.getElementById("successMessage").classList.remove("hidden");
+        this.reset();
+      } else {
+        alert("Erro ao enviar. Tente novamente.");
+      }
+    });
   </script>
 </body>
 </html>
