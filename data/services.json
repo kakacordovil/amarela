@@ -38,5 +38,22 @@
     "location": "Porto, Portugal",
     "atendimento": "Presencial",
     "link": "https://instagram.com/brunacakeporto"
+  },
+  {
+    "name": "Rita Estrada",
+    "service": "Psicóloga Clínica",
+    "category": "Psicologia",
+    "location": "Portugal",
+    "atendimento": "Online",
+    "link": "https://flow.page/rita-estrada"
+  },
+  {
+    "name": "Carla Veiga",
+    "service": "Instrutora Krav Maga",
+    "category": "Arte marcial",
+    "location": "Braga, Portugal",
+    "atendimento": "Presencial",
+    "link": "https://instagram.com/carlaveiga_kravmaga"
   }
+
 ]
