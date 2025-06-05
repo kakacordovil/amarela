@@ -71,48 +71,15 @@
 
   <!-- Script de lógica dos cards -->
   <script>
-    const services = [
-      {
-        name: "Itallie Hanna",
-        service: "Designer, Branding, Direção de arte",
-        category: "Design",
-        location: "Portugal",
-        atendimento: "Online",
-        link: "https://instagram.com/studiocupuacu"
-      },
-      {
-        name: "Isabel Cordovil",
-        service: "Esteticista",
-        category: "Estética",
-        location: "Belém PA, Brasil",
-        atendimento: "Presencial",
-        link: "https://instagram.com/belcordovil"
-      },
-      {
-        name: "Isabelle",
-        service: "Professora de francês",
-        category: "Educação",
-        location: "França",
-        atendimento: "Online",
-        link: "https://instagram.com/isa.elleflow"
-      },
-      {
-        name: "Olga Garcia",
-        service: "Tatuadora",
-        category: "Tattoo",
-        location: "Brasil",
-        atendimento: "Presencial",
-        link: "https://instagram.com/olgarcia.arte"
-      },
-      {
-        name: "Bruna Caixeta",
-        service: "Cake Designer",
-        category: "Confeitaria",
-        location: "Porto, Portugal",
-        atendimento: "Presencial",
-        link: "https://instagram.com/brunacakeporto"
-      }
-    ];
+    let services = [];
+
+    async function fetchServices() {
+      const response = await fetch("data/services.json");
+      services = await response.json();
+      updateDisplay();
+    }
+
+    fetchServices();
 
     const cardsContainer = document.getElementById("cards");
     const searchInput = document.getElementById("search");
