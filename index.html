@@ -76,7 +76,8 @@
         <input type="text" name="category" placeholder="Categoria (ex: Educação, Design)" class="w-full px-4 py-2 border rounded" required>
         <input type="text" name="location" placeholder="Local" class="w-full px-4 py-2 border rounded" required>
         <input type="text" name="atendimento" placeholder="Atendimento (Online ou Presencial)" class="w-full px-4 py-2 border rounded" required>
-        <input type="text" name="link" placeholder="Link página. Ex: https://instagram.com/seuperfil" class="w-full px-4 py-2 border rounded" required>
+        <input type="text" name="link" placeholder="Link da página. Ex: https://instagram.com/seuperfil" class="w-full px-4 py-2 border rounded" required>
+        <small class="text-sm text-gray-500">⚠️ Inclua o link completo com <code>https://</code></small>
         <button type="submit" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">Enviar</button>
       </form>
       <p id="successMessage" class="text-green-600 mt-4 hidden">Enviado com sucesso! Obrigada 💛</p>
@@ -192,7 +193,14 @@
 
       const formData = Object.fromEntries(new FormData(this).entries());
 
-      const response = await fetch("https://200anos.vercel.app/api/submit", {
+      const link = formData.link;
+      if (!link.startsWith("http://") && !link.startsWith("https://")) {
+        alert("Por favor, insira o link com http:// ou https://");
+        return;
+      }
+
+
+      const response = await fetch("https://amarela.vercel.app/api/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
