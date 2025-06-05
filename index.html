@@ -8,7 +8,7 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
   <div class="max-w-4xl mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold mb-4 text-center">Serviços prestados por mulheres</h1>
+    <h1 class="text-3xl font-bold mb-4 text-center">AmarEla - a lista de serviço e empresas de mulheres</h1>
     <p class="text-center mb-6 text-gray-600">Serviços prestados por mulheres. Apoie e contrate mulheres incríveis. </br> Use o campo de busca ou filtre por categoria.</p>
 
     <!-- Barra de busca + filtros -->
@@ -42,7 +42,7 @@
     </div>
 
     <footer class="mt-12 text-center text-sm text-gray-500">
-      <p>Quer adicionar alguém? Veja como <a href="contribute.md" class="text-blue-500 underline">aqui</a>.</p>
+      <p>Quer adicionar alguém? Veja como <a href="contribute.md" class="text-yellow-500 underline">aqui</a>.</p>
     </footer>
   </div>
 
@@ -112,7 +112,7 @@
           <p class="text-sm text-gray-600">${item.service} (${item.category})</p>
           <p class="text-sm text-gray-600"><strong>Local:</strong> ${item.location}</p>
           <p class="text-sm text-gray-600"><strong>Atendimento:</strong> ${item.atendimento}</p>
-          <a href="${item.link}" target="_blank" class="text-blue-500 hover:underline text-sm">Me encontre aqui</a>
+          <a href="${item.link}" target="_blank" class="text-yellow-500 hover:underline text-sm">Me encontre aqui</a>
         `;
         cardsContainer.appendChild(card);
       }
@@ -124,7 +124,7 @@
       for (let i = 1; i <= totalPages; i++) {
         const btn = document.createElement("button");
         btn.textContent = i;
-        btn.className = `px-3 py-1 border rounded ${i === currentPage ? 'bg-blue-500 text-white' : 'bg-white text-gray-700'}`;
+        btn.className = `px-3 py-1 border rounded ${i === currentPage ? 'bg-yellow-500 text-white' : 'bg-white text-gray-700'}`;
         btn.onclick = () => {
           currentPage = i;
           updateDisplay();
