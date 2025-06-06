@@ -4,7 +4,7 @@ import { Octokit } from "octokit";
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 
 const owner = "kakacordovil";         
-const repo = "200anos";                
+const repo = "amarela";                
 const filePath = "data/services.json";      
 const baseBranch = "main";
 
