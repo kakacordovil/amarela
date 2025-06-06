@@ -54,6 +54,13 @@
     "location": "Braga, Portugal",
     "atendimento": "Presencial",
     "link": "https://instagram.com/carlaveiga_kravmaga"
+  },
+  {
+    "name": "Aline Santos",
+    "service": "Gerente de Produto",
+    "category": "Gerenciamento",
+    "location": "Portugal",
+    "atendimento": "Online",
+    "link": "https://www.alinesantos.pro/"
   }
-
 ]
