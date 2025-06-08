@@ -70,5 +70,13 @@
     "location": "França",
     "atendimento": "Presencial",
     "link": "https://www.instagram.com/mpbcontent/"
+  },
+  {
+    "name": "Lorena Brito",
+    "service": "Marketing digital",
+    "category": "Marketing Digital",
+    "location": "Portugal",
+    "atendimento": "Online",
+    "link": "https://www.zaask.pt/user/sbritolorena"
   }
 ]
