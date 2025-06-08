@@ -62,5 +62,13 @@
     "location": "Portugal",
     "atendimento": "Online",
     "link": "https://www.alinesantos.pro/"
+  },
+  {
+    "name": "Diana Figueroa",
+    "service": "Fotografa",
+    "category": "Fotografia",
+    "location": "França",
+    "atendimento": "Presencial",
+    "link": "https://www.instagram.com/mpbcontent/"
   }
 ]
