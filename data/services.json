@@ -94,5 +94,13 @@
     "location": "Porto, Portugal",
     "atendimento": "Presencial",
     "link": "https://www.instagram.com/blumistudio/"
+  },
+  {
+    "name": "Viajart",
+    "service": "Viagens culturais ",
+    "category": "Viagens",
+    "location": "Marrocos",
+    "atendimento": "Online",
+    "link": "https://www.instagram.com/leartmimosemartesanato/"
   }
 ]
