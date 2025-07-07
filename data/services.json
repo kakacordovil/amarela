@@ -102,5 +102,45 @@
     "location": "Belem PA, Brasil ",
     "atendimento": "Presencial ",
     "link": "https://www.instagram.com/leartmimosemartesanato?igsh=MWVlMWlxd3oyaWxzZg=="
+  },
+  {
+    "name": "Michelle Rodrigues",
+    "service": "Coach física, Nutrição e Hairstylist ",
+    "category": "Preparo físico ",
+    "location": "Maia, Portugal",
+    "atendimento": "Online, Presencial",
+    "link": "https://www.instagram.com/michelle.rodrigues77/"
+  },
+  {
+    "name": "Ines Pinto ",
+    "service": "Cerâmica, oficinas e workshops ",
+    "category": "Design",
+    "location": "Porto, Portugal ",
+    "atendimento": "Presencial ",
+    "link": "https://www.instagram.com/imp.ines/"
+  },
+  {
+    "name": "Tucum Brasil",
+    "service": "Biojoias, artes e moda feito por mulheres indígenas ",
+    "category": "Design",
+    "location": "Rio de Janeiro, Brasil",
+    "atendimento": "Online",
+    "link": "https://www.instagram.com/tucumbrasil/"
+  },
+  {
+    "name": "Viajart ",
+    "service": "Viagens culturais para Marrocos ",
+    "category": "Viagens",
+    "location": "Marrocos",
+    "atendimento": "Online",
+    "link": "https://www.instagram.com/luana_marrocos/"
+  },
+  {
+    "name": "Bordô Ateliê",
+    "service": "Cursos, workshops e eventos de bordado",
+    "category": "Bordado",
+    "location": "Porto, Portugal",
+    "atendimento": "Presencial ",
+    "link": "https://www.instagram.com/obordoatelie/"
   }
 ]
