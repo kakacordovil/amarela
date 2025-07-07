@@ -78,5 +78,13 @@
     "location": "Portugal",
     "atendimento": "Online",
     "link": "https://www.zaask.pt/user/sbritolorena"
+  },
+  {
+    "name": "Blumi Studio",
+    "service": "Flores secas, cerâmicas e oficinas",
+    "category": "Decoração",
+    "location": "Porto, Portugal",
+    "atendimento": "Presencial",
+    "link": "https://www.instagram.com/blumistudio/"
   }
 ]
