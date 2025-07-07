@@ -43,8 +43,8 @@
     "name": "Rita Estrada",
     "service": "Psicóloga Clínica",
     "category": "Psicologia",
-    "location": "Portugal",
-    "atendimento": "Online",
+    "location": "Porto, Portugal",
+    "atendimento": "Online e Presencial",
     "link": "https://flow.page/rita-estrada"
   },
   {
@@ -70,5 +70,29 @@
     "location": "Belém PA, Brasil",
     "atendimento": "Presencial",
     "link": "https://www.instagram.com/biloiapelaesadv"
+  },
+  {
+    "name": "Diana Figueroa",
+    "service": "Fotografa",
+    "category": "Fotografia",
+    "location": "França",
+    "atendimento": "Presencial",
+    "link": "https://www.instagram.com/mpbcontent/"
+  },
+  {
+    "name": "Lorena Brito",
+    "service": "Marketing digital",
+    "category": "Marketing Digital",
+    "location": "Portugal",
+    "atendimento": "Online",
+    "link": "https://www.zaask.pt/user/sbritolorena"
+  },
+  {
+    "name": "Blumi Studio",
+    "service": "Flores secas, cerâmicas e oficinas",
+    "category": "Decoração",
+    "location": "Porto, Portugal",
+    "atendimento": "Presencial",
+    "link": "https://www.instagram.com/blumistudio/"
   }
 ]
