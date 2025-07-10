@@ -240,11 +240,27 @@
     "link": "https://www.instagram.com/ateliepiantavinha"
   },
   {
-    "name": "Paraensissimo",
+    "name": "Paraensíssimo",
     "service": "Gastronomia, vivência, alojamento local",
     "category": "Gastronomia",
     "location": "Ilha do Combú PA, Brasil",
     "atendimento": "Presencial ",
     "link": "https://www.instagram.com/paraensissimo.resto/"
+  },
+  {
+    "name": "Pati Nakamura",
+    "service": "Escritora, artista plástica, workshops ",
+    "category": "Artes",
+    "location": "Porto, Portugal ",
+    "atendimento": "Online e Presencial ",
+    "link": "https://www.instagram.com/nakalivre/"
+  },
+  {
+    "name": "Ancestralizando",
+    "service": "Comida afetiva ",
+    "category": "Gastronomia",
+    "location": "Lisboa, Portugal ",
+    "atendimento": "Presencial ",
+    "link": "https://www.instagram.com/ancestralizando.pt/"
   }
 ]
