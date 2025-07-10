@@ -8,6 +8,30 @@
     "link": "https://instagram.com/studiocupuacu"
   },
   {
+    "name": "Isis Rebeque",
+    "service": "Manicure híbrida, personalizado para a pele, alongamentos em gel",
+    "category": "Estética",
+    "location": "Lisboa, Portugal ",
+    "atendimento": "Presencial ",
+    "link": "https://www.instagram.com/isisrebequenails/"
+  },
+  {
+    "name": "Amo me",
+    "service": "Roupas, acessórios, artes, studio shop",
+    "category": "Moda",
+    "location": "Lousada, Portugal",
+    "atendimento": "Online",
+    "link": "https://www.instagram.com/amo.me.life.arte.design/"
+  },
+  {
+    "name": "Yasmin Alves ",
+    "service": "Fotografa e documentarista",
+    "category": "Fotografia",
+    "location": "Belém PÁ, Brasil",
+    "atendimento": "Presencial",
+    "link": "https://www.instagram.com/yalvs/"
+  },
+  {
     "name": "Isabel Cordovil",
     "service": "Esteticista",
     "category": "Estética",
@@ -214,21 +238,5 @@
     "location": "Vila Velha ES, Brasil",
     "atendimento": "Presencial e Online",
     "link": "https://www.instagram.com/ateliepiantavinha"
-  },
-  {
-    "name": "Amo me",
-    "service": "Roupas, acessórios, artes, studio shop",
-    "category": "Moda",
-    "location": "Lousada, Portugal",
-    "atendimento": "Online",
-    "link": "https://www.instagram.com/amo.me.life.arte.design/"
-  },
-  {
-    "name": "Yasmin Alves ",
-    "service": "Fotografa e documentarista",
-    "category": "Fotografia",
-    "location": "Belém PÁ, Brasil",
-    "atendimento": "Presencial",
-    "link": "https://www.instagram.com/yalvs/"
   }
 ]
