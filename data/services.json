@@ -270,5 +270,29 @@
     "location": "Icoaraci PA, Brasil",
     "atendimento": "Presencial ",
     "link": "https://www.instagram.com/fsceramica/"
+  },
+  {
+    "name": "Isadora não entende nada ",
+    "service": "Tattoo e ilustrações ",
+    "category": "Tattoo",
+    "location": "Rio de Janeiro RJ, Brasil ",
+    "atendimento": "Presencial e online",
+    "link": "https://www.instagram.com/isadoranaoentendenada/"
+  },
+  {
+    "name": "Panmela Castro",
+    "service": "Artista Visual e workshops ",
+    "category": "Artes",
+    "location": "Brasil",
+    "atendimento": "Presencial ",
+    "link": "https://www.instagram.com/isadoranaoentendenada/"
+  },
+  {
+    "name": "Diretriz Serviços Contábeis",
+    "service": "Contabilidade, abrir empresa, declaração de imposto, alteração contratual ",
+    "category": "Contabilidade",
+    "location": "Rio de Janeiro RJ, Brasil",
+    "atendimento": "Presencial e Online",
+    "link": "https://www.instagram.com/diretrizcontabeis/"
   }
 ]
