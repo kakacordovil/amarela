@@ -82,7 +82,7 @@
   {
     "name": "Aline Santos",
     "service": "Gerente de Produto",
-    "category": "Gerenciamento",
+    "category": "Tecnologia",
     "location": "Portugal",
     "atendimento": "Online",
     "link": "https://www.alinesantos.pro/"
@@ -138,15 +138,15 @@
   {
     "name": "Ines Pinto ",
     "service": "Cerâmica, oficinas e workshops ",
-    "category": "Design",
+    "category": "Cerâmica",
     "location": "Porto, Portugal ",
     "atendimento": "Presencial ",
     "link": "https://www.instagram.com/imp.ines/"
   },
   {
     "name": "Tucum Brasil",
-    "service": "Biojoias, artes e moda feito por mulheres indígenas ",
-    "category": "Design",
+    "service": "Biojoias, artes e moda feito por mulheres indígenas",
+    "category": "Moda",
     "location": "Rio de Janeiro, Brasil",
     "atendimento": "Online",
     "link": "https://www.instagram.com/tucumbrasil/"
@@ -202,7 +202,7 @@
   {
     "name": "A casa da Zana",
     "service": "Chefe Privado e eventos ",
-    "category": "Eventos",
+    "category": "Gastronomia",
     "location": "Porto, Portugal ",
     "atendimento": "Presencial",
     "link": "https://www.instagram.com/a_casa_da_zana_/"
@@ -234,7 +234,7 @@
   {
     "name": "Atelier Piantavinha",
     "service": "Arte e Pintura, workshops e personalização de objetos para casamentos e outras datas",
-    "category": "Pintura",
+    "category": "Artesanato",
     "location": "Vila Velha ES, Brasil",
     "atendimento": "Presencial e Online",
     "link": "https://www.instagram.com/ateliepiantavinha"
