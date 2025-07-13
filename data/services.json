@@ -294,5 +294,13 @@
     "location": "Rio de Janeiro RJ, Brasil",
     "atendimento": "Presencial e Online",
     "link": "https://www.instagram.com/diretrizcontabeis/"
+  },
+  {
+    "name": "Say Cheesecake & Co.",
+    "service": "Confeitaria, café e brunch",
+    "category": "Confeitaria",
+    "location": "Porto, Portugal ",
+    "atendimento": "Presencial",
+    "link": "https://www.instagram.com/saycheesecakeandco/"
   }
 ]
