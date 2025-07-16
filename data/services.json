@@ -318,5 +318,108 @@
     "location": "Canoas RS, Brasil",
     "atendimento": "Presencial",
     "link": "https://www.instagram.com/isagandini/"
+  },
+  {
+    "name": "Alves Jatobá ",
+    "service": "Fotografia, videografia e design ",
+    "category": "Fotografia ",
+    "location": "Porto, Portugal ",
+    "atendimento": "Presencial ",
+    "link": "https://www.instagram.com/alvesjatoba.cs/"
+  },
+  {
+    "name": "Mini Punks",
+    "service": "Moda alternativa feito à mão para crianças e mães ",
+    "category": "Moda",
+    "location": "Palmela, Portugal ",
+    "atendimento": "Online",
+    "link": "https://www.instagram.com/mini.punks.pt/"
+  },
+  {    "name": "Glamour",
+    "service": "Estética corpo e alma",
+    "category": "Estética",
+    "location": "Valongo, Portugal ",
+    "atendimento": "Presencial",
+    "link": "https://www.instagram.com/glamourclinicbodyandsoul/"
+  },
+  {
+    "name": "Kassie Tuba",
+    "service": "Fotografia de casamento e lifestyle",
+    "category": "Fotografia",
+    "location": "Lille • Belgium • Winnipeg • Porto",
+    "atendimento": "Presencial ",
+    "link": "https://www.instagram.com/kassietubaphotography/"
+  },
+  {
+    "name": "Yna Comunicação ",
+    "service": "Comunicação Socioambiental e Política na Amazônia",
+    "category": "Marketing",
+    "location": "Belém PÁ, Brasil ",
+    "atendimento": "Online",
+    "link": "https://www.instagram.com/ynacomunicacao/"
+  },
+  {
+    "name": "Anna Boogie",
+    "service": "Fashion Stylist",
+    "category": "Moda",
+    "location": "São Paulo SP, Brasil ",
+    "atendimento": "Online",
+    "link": "https://www.instagram.com/annaboogie?igsh=Z3ppMHZwbTg0aTQ4"
+  },
+  {
+    "name": "Mama Quilla Art",
+    "service": "Murais, Pinturas em telas e FineArt.",
+    "category": "Artes",
+    "location": "Belém PÁ, Brasil",
+    "atendimento": "Presencial ",
+    "link": "https://www.instagram.com/mama_quilla/"
+  },
+  {
+    "name": "Sara Groetaers",
+    "service": "Ilustrações e muralismo ",
+    "category": "Artes",
+    "location": "RJ, Brasil",
+    "atendimento": "Presencial",
+    "link": "https://www.instagram.com/saragroetaers_artes/"
+  },
+  {
+    "name": "Thaty Mascarenhas",
+    "service": "Locação de eventos",
+    "category": "Eventos",
+    "location": "Fortaleza CE, Brasil",
+    "atendimento": "Presencial e Online",
+    "link": "https://www.instagram.com/thaty.mascarenhas/"
+  },
+  {
+    "name": "Brenda Lemos",
+    "service": "Designer e ilustradora",
+    "category": "Design ",
+    "location": "Belém PÁ, Brasil",
+    "atendimento": "Online",
+    "link": "https://www.behance.net/brendalemosdesign/"
+  },
+  {
+    "name": "Maia Quaresma ",
+    "service": "Consultora Imobiliária ",
+    "category": "Imobiliária",
+    "location": "Porto, Portugal ",
+    "atendimento": "Presencial e Online ",
+    "link": "https://www.instagram.com/mayaquaresma/"
+  },
+  {
+    "name": "Casas Mairi",
+    "service": "Chalés a beira rio na Ilha de Mosqueiro PA",
+    "category": "Viagens",
+    "location": "Mosqueiro PA, Brasil ",
+    "atendimento": "Presencial e Online",
+    "link": "https://www.instagram.com/casasmairi/"
+  },
+  {
+    "name": "Carolismo Art",
+    "service": "Artista plástica, muralista, arquiteta ",
+    "category": "Artes",
+    "location": "Brasil",
+    "atendimento": "Presencial",
+    "link": "https://www.instagram.com/carolismo_art/"
   }
 ]
