@@ -318,5 +318,69 @@
     "location": "Belém PÁ, Brasil ",
     "atendimento": "Online",
     "link": "https://www.instagram.com/ynacomunicacao/"
+  },
+  {
+    "name": "Anna Boogie",
+    "service": "Fashion Stylist",
+    "category": "Moda",
+    "location": "São Paulo SP, Brasil ",
+    "atendimento": "Online",
+    "link": "https://www.instagram.com/annaboogie?igsh=Z3ppMHZwbTg0aTQ4"
+  },
+  {
+    "name": "Mama Quilla Art",
+    "service": "Murais, Pinturas em telas e FineArt.",
+    "category": "Artes",
+    "location": "Belém PÁ, Brasil",
+    "atendimento": "Presencial ",
+    "link": "https://www.instagram.com/mama_quilla/"
+  },
+  {
+    "name": "Sara Groetaers",
+    "service": "Ilustrações e muralismo ",
+    "category": "Artes",
+    "location": "RJ, Brasil",
+    "atendimento": "Presencial",
+    "link": "https://www.instagram.com/saragroetaers_artes/"
+  },
+  {
+    "name": "Thaty Mascarenhas",
+    "service": "Locação de eventos",
+    "category": "Eventos",
+    "location": "Fortaleza CE, Brasil",
+    "atendimento": "Presencial e Online",
+    "link": "https://www.instagram.com/thaty.mascarenhas/"
+  },
+  {
+    "name": "Brenda Lemos",
+    "service": "Designer e ilustradora",
+    "category": "Design ",
+    "location": "Belém PÁ, Brasil",
+    "atendimento": "Online",
+    "link": "https://www.behance.net/brendalemosdesign/"
+  },
+  {
+    "name": "Maia Quaresma ",
+    "service": "Consultora Imobiliária ",
+    "category": "Imobiliária",
+    "location": "Porto, Portugal ",
+    "atendimento": "Presencial e Online ",
+    "link": "https://www.instagram.com/mayaquaresma/"
+  },
+  {
+    "name": "Casas Mairi",
+    "service": "Chalés a beira rio na Ilha de Mosqueiro PA",
+    "category": "Viagens",
+    "location": "Mosqueiro PA, Brasil ",
+    "atendimento": "Presencial e Online",
+    "link": "https://www.instagram.com/casasmairi/"
+  },
+  {
+    "name": "Carolismo Art",
+    "service": "Artista plástica, muralista, arquiteta ",
+    "category": "Artes",
+    "location": "Brasil",
+    "atendimento": "Presencial",
+    "link": "https://www.instagram.com/carolismo_art/"
   }
 ]
