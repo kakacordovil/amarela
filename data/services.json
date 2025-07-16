@@ -318,5 +318,21 @@
     "location": "Porto, Portugal ",
     "atendimento": "Presencial e Online ",
     "link": "https://www.instagram.com/mayaquaresma/"
+  },
+  {
+    "name": "Casas Mairi",
+    "service": "Chalés a beira rio na Ilha de Mosqueiro PA",
+    "category": "Viagens",
+    "location": "Mosqueiro PA, Brasil ",
+    "atendimento": "Presencial e Online",
+    "link": "https://www.instagram.com/casasmairi/"
+  },
+  {
+    "name": "Carolismo Art",
+    "service": "Artista plástica, muralista, arquiteta ",
+    "category": "Artes",
+    "location": "Brasil",
+    "atendimento": "Presencial",
+    "link": "https://www.instagram.com/carolismo_art/"
   }
 ]
