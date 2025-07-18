@@ -351,7 +351,8 @@
     "atendimento": "Online",
     "link": "https://www.instagram.com/mini.punks.pt/"
   },
-  {    "name": "Glamour",
+  {
+    "name": "Glamour",
     "service": "Estética corpo e alma",
     "category": "Estética",
     "location": "Valongo, Portugal ",
@@ -437,5 +438,13 @@
     "location": "Brasil",
     "atendimento": "Presencial",
     "link": "https://www.instagram.com/carolismo_art/"
+  },
+  {
+    "name": "Júlia Martins Miranda",
+    "service": "Pintora, fotógrafa, vidiografa e musicista",
+    "category": "Artes",
+    "location": "Sicília, Itália ",
+    "atendimento": "Online",
+    "link": "https://www.instagram.com/julia.martins.miranda/"
   }
 ]
