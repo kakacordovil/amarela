@@ -53,4 +53,205 @@ body{
     radial-gradient(900px 450px at 12% 6%, rgba(255,106,61,.20), transparent 55%),
     radial-gradient(800px 420px at 88% 10%, rgba(109,92,255,.18), transparent 50%),
     radial-gradient(700px 400px at 50% 92%, rgba(246,183,60,.20), transparent 55%),
+    linear-gradient(135deg, var(--bg1), var(--bg2));
+  background-attachment: fixed;
+}
 
+/* Se o seu CSS já define fontes, isso só melhora. 
+   Se não tiver, fica um look mais “startup”. */
+body, input, button, textarea{
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Helvetica Neue", sans-serif;
+}
+
+/* Layout mais “respirado” */
+.container, main, .content, .wrapper{
+  max-width: 980px;
+}
+
+/* Tipografia (sem mexer no HTML) */
+h1, h2{
+  letter-spacing: -0.02em;
+}
+
+h1{
+  font-size: clamp(2rem, 3.3vw, 3rem);
+  line-height: 1.05;
+}
+
+h2{
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+}
+
+p{
+  color: var(--muted);
+}
+
+/* Aquele ar de “hero” com movimento/energia
+   (funciona mesmo se não existir class hero; só se existir, fica melhor) */
+.hero, header, .top, .banner{
+  position: relative;
+  isolation: isolate;
+}
+
+.hero::before, header::before, .banner::before{
+  content:"";
+  position:absolute;
+  inset:-40px -30px auto -30px;
+  height: 260px;
+  background:
+    radial-gradient(220px 220px at 18% 30%, rgba(255,106,61,.30), transparent 60%),
+    radial-gradient(240px 240px at 55% 10%, rgba(246,183,60,.35), transparent 60%),
+    radial-gradient(280px 280px at 86% 36%, rgba(109,92,255,.26), transparent 60%);
+  filter: blur(2px);
+  z-index:-1;
+  animation: floatGlow 9s ease-in-out infinite;
+  pointer-events:none;
+}
+
+@keyframes floatGlow{
+  0%,100%{ transform: translate3d(0,0,0); opacity: .95; }
+  50%{ transform: translate3d(0,10px,0); opacity: 1; }
+}
+
+/* Card moderno (form e seções) — tenta pegar classes comuns */
+.form-container, .form, form, .card, .box, .section{
+  border-radius: var(--radius);
+}
+
+/* Se o seu form já é um card, isso dá o upgrade */
+.form-container, .card, .box, .form-wrapper{
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow1);
+  backdrop-filter: blur(12px);
+}
+
+/* Se o form for “form” direto, aplica também */
+form{
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow1);
+  backdrop-filter: blur(12px);
+  padding: 28px;
+  border-radius: var(--radius);
+}
+
+/* Inputs com feel moderno */
+input, textarea, select{
+  border: 1px solid rgba(21,21,21,.12);
+  border-radius: 14px;
+  padding: 14px 14px;
+  background: rgba(255,255,255,.92);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+input::placeholder, textarea::placeholder{
+  color: rgba(21,21,21,.42);
+}
+
+input:focus, textarea:focus, select:focus{
+  outline: none;
+  border-color: rgba(255,106,61,.45);
+  box-shadow: 0 0 0 5px rgba(255,106,61,.16);
+  transform: translateY(-1px);
+}
+
+/* Botão vibrante + energia */
+button, .btn, input[type="submit"]{
+  border: none;
+  border-radius: 14px;
+  padding: 12px 18px;
+  font-weight: 700;
+  letter-spacing: .01em;
+  color: white;
+  cursor: pointer;
+  background:
+    linear-gradient(135deg, var(--brand2), var(--brand1));
+  box-shadow: 0 14px 28px rgba(255,106,61,.25);
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Brilho passando no hover */
+button::after, .btn::after, input[type="submit"]::after{
+  content:"";
+  position:absolute;
+  inset: -40% -60%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
+  transform: rotate(18deg) translateX(-40%);
+  transition: transform .5s ease;
+}
+
+button:hover, .btn:hover, input[type="submit"]:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(255,106,61,.30);
+  filter: saturate(1.05);
+}
+
+button:hover::after, .btn:hover::after, input[type="submit"]:hover::after{
+  transform: rotate(18deg) translateX(40%);
+}
+
+button:active, .btn:active, input[type="submit"]:active{
+  transform: translateY(0px) scale(.99);
+}
+
+/* Links mais modernos */
+a{
+  color: #2a2a2a;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,106,61,.35);
+  transition: color .18s ease, border-color .18s ease;
+}
+a:hover{
+  color: #000;
+  border-color: rgba(109,92,255,.45);
+}
+
+/* Mensagens de sucesso/erro — para ficar “produto” */
+.success, .alert-success{
+  background: rgba(34,197,94,.12);
+  border: 1px solid rgba(34,197,94,.25);
+  color: rgba(15, 88, 41, .95);
+  padding: 12px 14px;
+  border-radius: 14px;
+}
+
+.error, .alert-error{
+  background: rgba(239,68,68,.10);
+  border: 1px solid rgba(239,68,68,.22);
+  color: rgba(127, 29, 29, .95);
+  padding: 12px 14px;
+  border-radius: 14px;
+}
+
+/* Pequenas animações suaves em elementos principais */
+form, .card, .box, .section{
+  animation: fadeUp .45s ease both;
+}
+
+@keyframes fadeUp{
+  from{ opacity: 0; transform: translateY(8px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+
+/* Responsivo: mais padding e “stack” confortável */
+@media (max-width: 720px){
+  form{
+    padding: 18px;
+    border-radius: 16px;
+  }
+  input, textarea, select{
+    padding: 13px 12px;
+  }
+}
+
+/* Acessibilidade: respeitar usuários que preferem menos movimento */
+@media (prefers-reduced-motion: reduce){
+  *{
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
