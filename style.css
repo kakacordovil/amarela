@@ -1,111 +1,103 @@
-/* ANTIGO 
-body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  line-height: 1.6;
-}
-h1 {
-  color: #4a4a4a;
-}
-section {
-  margin-bottom: 30px;
-}
-a {
-  color: #1a73e8;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-*/
 /* =========================================================
-   AmarEla — Modern refresh (Startup social com propósito)
-   Cole este bloco NO FINAL do style.css
+   AmarEla — Editorial Startup (Vogue-ish + vibrante)
+   style.css LIMPO (substitui o arquivo inteiro)
    ========================================================= */
 
-/* Tokens */
+/* 1) Tokens (1x) */
 :root{
-  --bg1: #fff7f0;
-  --bg2: #fff2e3;
+  /* Typography */
+  --font-ui: "Poppins", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Helvetica Neue", sans-serif;
+  --font-display: "Playfair Display", ui-serif, Georgia, "Times New Roman", Times, serif;
+
+  /* Colors */
   --ink: #151515;
   --muted: rgba(21,21,21,.68);
 
-  --brand1: #f6b73c;  /* dourado energético */
-  --brand2: #ff6a3d;  /* coral vibrante */
-  --brand3: #6d5cff;  /* roxo moderno */
+  --bg1: #fff7f0;
+  --bg2: #fff2e3;
 
-  --card: rgba(255,255,255,.78);
-  --border: rgba(21,21,21,.10);
+  --brandA: #ff6a3d; /* coral */
+  --brandB: #f6b73c; /* dourado */
+  --brandC: #6d5cff; /* roxo */
 
-  --shadow1: 0 18px 50px rgba(0,0,0,.08);
-  --shadow2: 0 10px 25px rgba(0,0,0,.10);
+  /* Glass + borders + shadows */
+  --glass: rgba(255,255,255,.62);
+  --glass-strong: rgba(255,255,255,.72);
+  --glass-border: rgba(255,255,255,.36);
+
+  --shadow-soft: 0 10px 28px rgba(0,0,0,.08);
+  --shadow-deep: 0 22px 60px rgba(0,0,0,.12);
+
   --radius: 18px;
+
+  /* Motion */
+  --ease: cubic-bezier(.2, .8, .2, 1);
+  --dur: 220ms;
 }
 
-/* Base */
-html, body{
-  height: 100%;
-}
+/* 2) Base */
+html, body{ height: 100%; }
+html{ scroll-behavior: smooth; }
 
 body{
+  margin: 0;
   color: var(--ink);
+  font-family: var(--font-ui);
   background:
     radial-gradient(900px 450px at 12% 6%, rgba(255,106,61,.20), transparent 55%),
     radial-gradient(800px 420px at 88% 10%, rgba(109,92,255,.18), transparent 50%),
     radial-gradient(700px 400px at 50% 92%, rgba(246,183,60,.20), transparent 55%),
     linear-gradient(135deg, var(--bg1), var(--bg2));
   background-attachment: fixed;
+  overflow-x: hidden; /* evita “deslocamento” por 100vw */
 }
 
-/* Se o seu CSS já define fontes, isso só melhora. 
-   Se não tiver, fica um look mais “startup”. */
-body, input, button, textarea{
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Helvetica Neue", sans-serif;
+p{ color: var(--muted); }
+
+a{
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,106,61,.28);
+  transition: border-color var(--dur) var(--ease), opacity var(--dur) var(--ease);
+}
+a:hover{
+  border-color: rgba(109,92,255,.38);
+  opacity: .95;
 }
 
-/* Layout mais “respirado” */
-.container, main, .content, .wrapper{
-  max-width: 980px;
+/* 8) Fix de centralização (sempre ativo) */
+#hero > div,
+#content > div{
+  width: min(100% - 3rem, 64rem); /* ~max-w-5xl */
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 640px){
+  #hero > div,
+  #content > div{
+    width: min(100% - 2rem, 64rem);
+  }
 }
 
-/* Tipografia (sem mexer no HTML) */
-h1, h2{
-  letter-spacing: -0.02em;
-}
-
-h1{
-  font-size: clamp(2rem, 3.3vw, 3rem);
-  line-height: 1.05;
-}
-
-h2{
-  font-size: clamp(1.4rem, 2.2vw, 2rem);
-}
-
-p{
-  color: var(--muted);
-}
-
-/* Aquele ar de “hero” com movimento/energia
-   (funciona mesmo se não existir class hero; só se existir, fica melhor) */
-.hero, header, .top, .banner{
+/* 3) Hero (editorial + movimento suave) */
+#hero{
   position: relative;
   isolation: isolate;
 }
 
-.hero::before, header::before, .banner::before{
+#hero::before{
   content:"";
   position:absolute;
-  inset:-40px -30px auto -30px;
+  inset:-60px -40px auto -40px;
   height: 260px;
-  background:
-    radial-gradient(220px 220px at 18% 30%, rgba(255,106,61,.30), transparent 60%),
-    radial-gradient(240px 240px at 55% 10%, rgba(246,183,60,.35), transparent 60%),
-    radial-gradient(280px 280px at 86% 36%, rgba(109,92,255,.26), transparent 60%);
-  filter: blur(2px);
   z-index:-1;
-  animation: floatGlow 9s ease-in-out infinite;
   pointer-events:none;
+  background:
+    radial-gradient(220px 220px at 18% 32%, rgba(255,106,61,.28), transparent 60%),
+    radial-gradient(260px 260px at 55% 10%, rgba(246,183,60,.30), transparent 60%),
+    radial-gradient(280px 280px at 86% 36%, rgba(109,92,255,.22), transparent 60%);
+  filter: blur(1px);
+  animation: floatGlow 9s ease-in-out infinite;
 }
 
 @keyframes floatGlow{
@@ -113,422 +105,74 @@ p{
   50%{ transform: translate3d(0,10px,0); opacity: 1; }
 }
 
-/* Card moderno (form e seções) — tenta pegar classes comuns */
-.form-container, .form, form, .card, .box, .section{
+#hero h1{
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  line-height: .95;
+  margin: 0;
+}
+
+/* 4) Cards + Glass (form, seção destaque, cards serviços) */
+#formarelo,
+section.my-12,
+#cards > div{
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-soft);
 }
 
-/* Se o seu form já é um card, isso dá o upgrade */
-.form-container, .card, .box, .form-wrapper{
-  background: var(--card);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow1);
-  backdrop-filter: blur(12px);
-}
-
-/* Se o form for “form” direto, aplica também */
-form{
-  background: var(--card);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow1);
-  backdrop-filter: blur(12px);
-  padding: 28px;
-  border-radius: var(--radius);
-}
-
-/* Inputs com feel moderno */
-input, textarea, select{
-  border: 1px solid rgba(21,21,21,.12);
+/* 5) Inputs + micro-interações */
+input, select, textarea{
+  font-family: var(--font-ui);
+  background: rgba(255,255,255,.85);
+  border: 1px solid rgba(21,21,21,.10);
   border-radius: 14px;
   padding: 14px 14px;
-  background: rgba(255,255,255,.92);
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  transition: transform var(--dur) var(--ease),
+              box-shadow var(--dur) var(--ease),
+              border-color var(--dur) var(--ease);
 }
 
 input::placeholder, textarea::placeholder{
   color: rgba(21,21,21,.42);
 }
 
-input:focus, textarea:focus, select:focus{
-  outline: none;
-  border-color: rgba(255,106,61,.45);
-  box-shadow: 0 0 0 5px rgba(255,106,61,.16);
+input:hover, select:hover, textarea:hover{
   transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0,0,0,.06);
 }
 
-/* Botão vibrante + energia */
-button, .btn, input[type="submit"]{
+input:focus, select:focus, textarea:focus{
+  outline: none;
+  transform: translateY(-2px);
+  border-color: rgba(255,106,61,.45);
+  box-shadow: 0 0 0 5px rgba(255,106,61,.16), 0 18px 30px rgba(0,0,0,.08);
+}
+
+/* 6) Botão + animação (CTA do form) */
+#addForm button[type="submit"]{
   border: none;
-  border-radius: 14px;
+  border-radius: 999px;
   padding: 12px 18px;
   font-weight: 700;
-  letter-spacing: .01em;
-  color: white;
+  letter-spacing: .02em;
+  color: #fff;
   cursor: pointer;
-  background:
-    linear-gradient(135deg, var(--brand2), var(--brand1));
-  box-shadow: 0 14px 28px rgba(255,106,61,.25);
-  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+
+  background: linear-gradient(135deg, var(--brandA), var(--brandB));
+  box-shadow: 0 14px 28px rgba(255,106,61,.22);
+
   position: relative;
   overflow: hidden;
-}
-
-/* Brilho passando no hover */
-button::after, .btn::after, input[type="submit"]::after{
-  content:"";
-  position:absolute;
-  inset: -40% -60%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
-  transform: rotate(18deg) translateX(-40%);
-  transition: transform .5s ease;
-}
-
-button:hover, .btn:hover, input[type="submit"]:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 20px 40px rgba(255,106,61,.30);
-  filter: saturate(1.05);
-}
-
-button:hover::after, .btn:hover::after, input[type="submit"]:hover::after{
-  transform: rotate(18deg) translateX(40%);
-}
-
-button:active, .btn:active, input[type="submit"]:active{
-  transform: translateY(0px) scale(.99);
-}
-
-/* Links mais modernos */
-a{
-  color: #2a2a2a;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255,106,61,.35);
-  transition: color .18s ease, border-color .18s ease;
-}
-a:hover{
-  color: #000;
-  border-color: rgba(109,92,255,.45);
-}
-
-/* Mensagens de sucesso/erro — para ficar “produto” */
-.success, .alert-success{
-  background: rgba(34,197,94,.12);
-  border: 1px solid rgba(34,197,94,.25);
-  color: rgba(15, 88, 41, .95);
-  padding: 12px 14px;
-  border-radius: 14px;
-}
-
-.error, .alert-error{
-  background: rgba(239,68,68,.10);
-  border: 1px solid rgba(239,68,68,.22);
-  color: rgba(127, 29, 29, .95);
-  padding: 12px 14px;
-  border-radius: 14px;
-}
-
-/* Pequenas animações suaves em elementos principais */
-form, .card, .box, .section{
-  animation: fadeUp .45s ease both;
-}
-
-@keyframes fadeUp{
-  from{ opacity: 0; transform: translateY(8px); }
-  to{ opacity: 1; transform: translateY(0); }
-}
-
-/* Responsivo: mais padding e “stack” confortável */
-@media (max-width: 720px){
-  form{
-    padding: 18px;
-    border-radius: 16px;
-  }
-  input, textarea, select{
-    padding: 13px 12px;
-  }
-}
-
-/* Acessibilidade: respeitar usuários que preferem menos movimento */
-@media (prefers-reduced-motion: reduce){
-  *{
-    animation: none !important;
-    transition: none !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-
-
-/* =========================================================
-   AmarEla — Premium UI pack (glass + tipografia + motion)
-   Cole este bloco NO FINAL do style.css
-   ========================================================= */
-
-/* Tipografia */
-:root{
-  --font-ui: "Poppins", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Helvetica Neue", sans-serif;
-  --font-display: "Playfair Display", ui-serif, Georgia, "Times New Roman", Times, serif;
-
-  /* Glass */
-  --glass: rgba(255, 255, 255, 0.62);
-  --glass-strong: rgba(255, 255, 255, 0.72);
-  --glass-border: rgba(255, 255, 255, 0.38);
-
-  /* Shadows */
-  --shadow-soft: 0 10px 28px rgba(0,0,0,.08);
-  --shadow-deep: 0 22px 60px rgba(0,0,0,.12);
-
-  /* Motion */
-  --ease: cubic-bezier(.2, .8, .2, 1);
-  --dur: 220ms;
-}
-
-body, input, button, textarea, select{
-  font-family: var(--font-ui) !important;
-}
-
-h1, h2, .title, .headline{
-  font-family: var(--font-display) !important;
-}
-
-h1{
-  font-weight: 700 !important;
-  letter-spacing: -0.03em;
-}
-
-h2{
-  font-weight: 700 !important;
-  letter-spacing: -0.02em;
-}
-
-/* Transições suaves globais (sem exagerar) */
-a, button, input, select, textarea, #cards > div{
+  will-change: transform, box-shadow;
   transition: transform var(--dur) var(--ease),
               box-shadow var(--dur) var(--ease),
-              border-color var(--dur) var(--ease),
-              background var(--dur) var(--ease),
-              filter var(--dur) var(--ease),
-              opacity var(--dur) var(--ease);
-}
-
-/* Glass cards: form + sections */
-#formarelo,
-section.my-12,
-form{
-  background: var(--glass) !important;
-  border: 1px solid var(--glass-border) !important;
-  box-shadow: var(--shadow-soft) !important;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-}
-
-#formarelo:hover,
-section.my-12:hover,
-form:hover{
-  box-shadow: var(--shadow-deep) !important;
-}
-
-/* Inputs: micro-interações (hover + focus) */
-input, select, textarea{
-  background: rgba(255,255,255,.85) !important;
-  border: 1px solid rgba(21,21,21,.10) !important;
-}
-
-input:hover, select:hover, textarea:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 8px 18px rgba(0,0,0,.06);
-}
-
-input:focus, select:focus, textarea:focus{
-  transform: translateY(-2px);
-  box-shadow: 0 0 0 5px rgba(255,106,61,.16), 0 18px 30px rgba(0,0,0,.08) !important;
-}
-
-/* Botão com animação: pulse/glow sutil */
-#addForm button[type="submit"]{
-  transform: translateZ(0);
-  will-change: transform, box-shadow;
-  animation: ctaPulse 3.2s var(--ease) infinite;
-}
-
-@keyframes ctaPulse{
-  0%, 100% { box-shadow: 0 14px 28px rgba(255,106,61,.22); }
-  50%      { box-shadow: 0 18px 40px rgba(255,106,61,.30); }
-}
-
-#addForm button[type="submit"]:hover{
-  transform: translateY(-3px) scale(1.01);
-}
-
-#addForm button[type="submit"]:active{
-  transform: translateY(-1px) scale(.99);
-  animation: none;
-}
-
-/* Cards de serviços: glass + hover “lift” */
-#cards > div{
-  background: var(--glass-strong) !important;
-  border: 1px solid rgba(255,255,255,.42) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: var(--shadow-soft) !important;
-}
-
-#cards > div:hover{
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-deep) !important;
-}
-
-/* Efeito “borda viva” no hover */
-#cards > div::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  border-radius: 16px;
-  padding: 1px;
-  background: linear-gradient(135deg, rgba(255,106,61,.55), rgba(246,183,60,.55), rgba(109,92,255,.45));
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity var(--dur) var(--ease);
-  pointer-events:none;
-}
-
-/* garante posicionamento pra pseudo-elemento */
-#cards > div{
-  position: relative;
-}
-
-#cards > div:hover::before{
-  opacity: .9;
-}
-
-/* Scroll reveal (sutil): ativa por CSS puro usando view timeline quando suportado.
-   Em browsers sem suporte, continua bonito sem reveal. */
-@supports (animation-timeline: view()){
-  #cards > div,
-  #formarelo,
-  section.my-12{
-    animation: revealUp both;
-    animation-timeline: view();
-    animation-range: entry 20% cover 28%;
-  }
-
-  @keyframes revealUp{
-    from{ opacity: 0; transform: translateY(10px); }
-    to{ opacity: 1; transform: translateY(0); }
-  }
-}
-
-/* Se quiser rolagem suave */
-html{
-  scroll-behavior: smooth;
-}
-
-/* Acessibilidade */
-@media (prefers-reduced-motion: reduce){
-  #addForm button[type="submit"]{ animation: none !important; }
-  html{ scroll-behavior: auto; }
-}
-
-/* =========================
-   AmarEla — Editorial + Vibrante (final polish)
-   ========================= */
-
-:root{
-  --font-ui: "Poppins", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Helvetica Neue", sans-serif;
-  --font-display: "Playfair Display", ui-serif, Georgia, "Times New Roman", Times, serif;
-
-  --glass: rgba(255,255,255,.62);
-  --glass-border: rgba(255,255,255,.38);
-
-  --shadow-soft: 0 10px 28px rgba(0,0,0,.08);
-  --shadow-deep: 0 22px 60px rgba(0,0,0,.12);
-
-  --ease: cubic-bezier(.2, .8, .2, 1);
-  --dur: 220ms;
-}
-
-body, input, button, textarea, select{ font-family: var(--font-ui) !important; }
-#hero h1, h2, h3{ font-family: var(--font-display) !important; }
-
-/* HERO editorial: uppercase + tracking */
-#hero h1{
-  text-transform: uppercase;
-  letter-spacing: .12em;
-  line-height: .95;
-}
-
-/* Mais espaço entre blocos (editorial) */
-#content > div > *{ margin-top: 22px; }
-@media (min-width: 768px){
-  #content > div > *{ margin-top: 34px; }
-}
-
-/* Glass + sombras suaves */
-#formarelo,
-section.my-12,
-#cards > div{
-  background: var(--glass) !important;
-  border: 1px solid var(--glass-border) !important;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: var(--shadow-soft) !important;
-  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
-}
-
-/* Cards mais leves e elegantes */
-#cards > div{
-  position: relative;
-}
-
-#cards > div:hover{
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-deep) !important;
-}
-
-/* Hover com “borda viva” elegante */
-#cards > div::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  border-radius: 16px;
-  padding: 1px;
-  background: linear-gradient(135deg, rgba(255,106,61,.55), rgba(246,183,60,.55), rgba(109,92,255,.45));
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity var(--dur) var(--ease);
-  pointer-events:none;
-}
-
-#cards > div:hover::before{ opacity: .9; }
-
-/* Inputs: micro-interações + focus premium */
-input, select, textarea{
-  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
-}
-
-input:hover, select:hover, textarea:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 8px 18px rgba(0,0,0,.06);
-}
-
-input:focus, select:focus, textarea:focus{
-  transform: translateY(-2px);
-  box-shadow: 0 0 0 5px rgba(255,106,61,.16), 0 18px 30px rgba(0,0,0,.08) !important;
-}
-
-/* Botão com animação (sutil) */
-#addForm button[type="submit"]{
-  border-radius: 999px !important;
-  font-weight: 700 !important;
-  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), filter var(--dur) var(--ease);
+              filter var(--dur) var(--ease);
   animation: ctaPulse 3.2s var(--ease) infinite;
 }
 
@@ -537,9 +181,23 @@ input:focus, select:focus, textarea:focus{
   50%     { box-shadow: 0 18px 44px rgba(255,106,61,.30); }
 }
 
+#addForm button[type="submit"]::after{
+  content:"";
+  position:absolute;
+  inset:-40% -60%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
+  transform: rotate(18deg) translateX(-40%);
+  transition: transform 520ms var(--ease);
+}
+
 #addForm button[type="submit"]:hover{
   transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 20px 52px rgba(255,106,61,.28);
   filter: saturate(1.05);
+}
+
+#addForm button[type="submit"]:hover::after{
+  transform: rotate(18deg) translateX(40%);
 }
 
 #addForm button[type="submit"]:active{
@@ -547,9 +205,46 @@ input:focus, select:focus, textarea:focus{
   animation: none;
 }
 
-/* Scroll reveal sutil (quando suportado) */
+/* 7) Hover + scroll reveal (cards serviços) */
+#cards > div{
+  position: relative;
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+
+#cards > div:hover{
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-deep);
+  background: var(--glass-strong);
+}
+
+/* Borda viva elegante */
+#cards > div::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius: var(--radius);
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255,106,61,.55), rgba(246,183,60,.55), rgba(109,92,255,.45));
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease);
+  pointer-events:none;
+}
+
+#cards > div:hover::before{
+  opacity: .9;
+}
+
+/* Scroll reveal sutil quando suportado */
 @supports (animation-timeline: view()){
-  #hero > div, #formarelo, #cards > div, section.my-12{
+  #hero > div,
+  #formarelo,
+  section.my-12,
+  #cards > div{
     animation: revealUp both;
     animation-timeline: view();
     animation-range: entry 15% cover 25%;
@@ -560,10 +255,15 @@ input:focus, select:focus, textarea:focus{
   }
 }
 
-/* Acessibilidade */
-@media (prefers-reduced-motion: reduce){
-  #addForm button[type="submit"]{ animation: none !important; }
-  *{ transition: none !important; animation: none !important; }
+/* Responsivo */
+@media (max-width: 720px){
+  input, select, textarea{ padding: 13px 12px; }
 }
 
-
+/* Acessibilidade */
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  #hero::before{ animation: none; }
+  #addForm button[type="submit"]{ animation: none; }
+  *{ transition: none !important; animation: none !important; }
+}
