@@ -1,3 +1,4 @@
+/* ANTIGO 
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
@@ -16,3 +17,40 @@ a {
 a:hover {
   text-decoration: underline;
 }
+*/
+/* =========================================================
+   AmarEla — Modern refresh (Startup social com propósito)
+   Cole este bloco NO FINAL do style.css
+   ========================================================= */
+
+/* Tokens */
+:root{
+  --bg1: #fff7f0;
+  --bg2: #fff2e3;
+  --ink: #151515;
+  --muted: rgba(21,21,21,.68);
+
+  --brand1: #f6b73c;  /* dourado energético */
+  --brand2: #ff6a3d;  /* coral vibrante */
+  --brand3: #6d5cff;  /* roxo moderno */
+
+  --card: rgba(255,255,255,.78);
+  --border: rgba(21,21,21,.10);
+
+  --shadow1: 0 18px 50px rgba(0,0,0,.08);
+  --shadow2: 0 10px 25px rgba(0,0,0,.10);
+  --radius: 18px;
+}
+
+/* Base */
+html, body{
+  height: 100%;
+}
+
+body{
+  color: var(--ink);
+  background:
+    radial-gradient(900px 450px at 12% 6%, rgba(255,106,61,.20), transparent 55%),
+    radial-gradient(800px 420px at 88% 10%, rgba(109,92,255,.18), transparent 50%),
+    radial-gradient(700px 400px at 50% 92%, rgba(246,183,60,.20), transparent 55%),
+
