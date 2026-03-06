@@ -462,5 +462,13 @@
     "location": "Porto - Portugal ",
     "atendimento": "Presencial e online ",
     "link": "https://www.instagram.com/cariocapolewear?igsh=MW9jcjJsbWUzenJ6aw=="
+  },
+  {
+    "name": "icamiabas lab",
+    "service": "apoio a mulheres na amazonia",
+    "category": "empreendedorismo",
+    "location": "Pará",
+    "atendimento": "Online",
+    "link": "https://amarela.vercel.app/"
   }
 ]
