@@ -1,0 +1,10 @@
+# Environment variables — never commit secrets like GITHUB_TOKEN
+.env
+.env.local
+.env*.local
+
+# Vercel local dev artifacts
+.vercel
+
+# Node (if anyone runs vercel dev or installs deps locally)
+node_modules/

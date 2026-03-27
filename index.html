@@ -3,124 +3,210 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AmarEla</title>
+  <title>AmarEla — Serviços de Mulheres</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css" />
-
-
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <header class="flex justify-between items-center py-4 px-4 md:px-8 bg-yellow-50 shadow relative">
-    <h1 class="text-xl font-bold text-yellow-800">AmarEla</h1>
-    
-    <!-- Botão Mobile -->
-    <button id="menuBtn" class="md:hidden text-yellow-800 text-2xl focus:outline-none z-50">
-      ☰
-    </button>
 
-    <!-- Menu de navegação -->
-    <nav id="menu" class="hidden md:flex flex-col md:flex-row md:space-x-6 absolute md:static top-full left-0 w-full md:w-auto bg-yellow-50 md:bg-transparent shadow-md md:shadow-none z-40 transition-all duration-300 ease-in-out">
-      <a href="index.html" class="block px-4 py-2 md:p-0 text-gray-700 hover:text-yellow-600 font-medium">Início</a>
-      <a href="about.html" class="block px-4 py-2 md:p-0 text-gray-700 hover:text-yellow-600 font-medium">Sobre</a>
-      <a href="contact.html" class="block px-4 py-2 md:p-0 text-gray-700 hover:text-yellow-600 font-medium">Contato</a>
-    </nav>
+<body>
+
+  <!-- ── Header ─────────────────────────────────────── -->
+  <header class="site-header">
+    <div class="max-w-6xl mx-auto px-4 md:px-8 flex justify-between items-center h-16">
+
+      <a href="index.html" class="flex items-center gap-2 group">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-yellow-500 group-hover:text-yellow-600 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <span class="text-xl font-bold text-yellow-800 tracking-tight">AmarEla</span>
+      </a>
+
+      <!-- Mobile toggle -->
+      <button id="menuBtn" class="md:hidden text-stone-600 hover:text-yellow-600 focus:outline-none z-50 p-1">
+        <svg id="iconHam" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+        <svg id="iconX" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+
+      <!-- Nav -->
+      <nav id="menu" class="hidden md:flex flex-col md:flex-row md:gap-1 absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent border-b md:border-0 border-yellow-100 shadow-md md:shadow-none z-40 px-4 pb-4 md:p-0">
+        <a href="index.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:text-yellow-700 hover:bg-yellow-50 font-medium text-sm transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Início
+        </a>
+        <a href="about.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:text-yellow-700 hover:bg-yellow-50 font-medium text-sm transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          Sobre
+        </a>
+        <a href="contact.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:text-yellow-700 hover:bg-yellow-50 font-medium text-sm transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z"/><path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10"/></svg>
+          Contato
+        </a>
+        <a href="contact.html" class="mt-2 md:mt-0 md:ml-3 flex items-center gap-2 px-4 py-2 rounded-lg bg-yellow-500 hover:bg-yellow-600 text-white font-semibold text-sm transition-colors shadow-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+          Adicionar serviço
+        </a>
+      </nav>
+    </div>
   </header>
 
-  <div class="max-w-4xl mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold mb-4 text-center">AmarEla - a lista de serviços e empresas de mulheres</h1>
-    <p class="text-center mb-6 text-gray-600">
-      Serviços prestados por mulheres. Apoie e contrate mulheres incríveis. <br>
-      Use o campo de busca ou filtre por categoria.
-    </p>
+  <!-- ── Hero ───────────────────────────────────────── -->
+  <section class="hero py-14 md:py-20 px-4 text-center">
+    <div class="max-w-2xl mx-auto">
+      <span class="inline-flex items-center gap-1.5 text-xs font-semibold tracking-widest uppercase text-yellow-600 bg-yellow-100 px-3 py-1 rounded-full mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11.562 3.266a1 1 0 0 1 .876 0L22 8l-10 4.75L2 8z"/><path d="M22 8v8"/><path d="M2 8v8l10 4.75"/><path d="M12 12.75V22"/></svg>
+        Movimento &amp; Comunidade
+      </span>
+      <h1 class="text-4xl md:text-5xl font-bold text-stone-900 leading-tight mb-4">
+        Serviços de <span class="text-yellow-500">mulheres</span><br class="hidden sm:inline"> incríveis
+      </h1>
+      <p class="text-stone-500 text-lg mb-8 leading-relaxed">
+        Uma lista aberta e comunitária para dar visibilidade a quem empreende, cria, cura e transforma. Apoie e contrate mulheres.
+      </p>
+      <a href="#formarelo" class="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-6 py-3 rounded-xl transition-colors shadow-md hover:shadow-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+        Adicionar meu serviço
+      </a>
+    </div>
+  </section>
 
-    <!-- Barra de busca + filtros -->
-    <div class="flex flex-col sm:flex-row gap-4 mb-6">
-      <input type="text" id="search" placeholder="Buscar por nome ou serviço..." class="w-full px-4 py-2 border rounded shadow-sm" />
-      <select id="filterCategory" class="px-4 py-2 border rounded shadow-sm">
-        <option value="">Todas as categorias</option>
-        <option value="Arte Marcial">Arte Marcial</option>
-        <option value="Artes">Artes</option>
-        <option value="Artesanato">Artesanato</option>
-        <option value="Bem Estar">Bem Estar</option>
-        <option value="Bordado">Bordado</option>
-        <option value="Cerâmica">Cerâmica</option>
-        <option value="Confeitaria">Confeitaria</option>
-        <option value="Contabilidade">Contabilidade</option>
-        <option value="Decoração">Decoração</option>
-        <option value="Design">Design</option>
-        <option value="Direito">Direito</option>
-        <option value="Estética">Estética</option>
-        <option value="Educação">Educação</option>
-        <option value="Fotografia">Fotografia</option>        
-        <option value="Gastronomia">Gastronomia</option>
-        <option value="Imobiliária">Imobiliária</option>
-        <option value="Moda">Moda</option>
-        <option value="Marketing">Marketing</option>
-        <option value="Marketing Digital">Marketing Digital</option>
-        <option value="Psicologia">Psicologia</option>
-        <option value="Tattoo">Tattoo</option>
-        <option value="Tecnologia">Tecnologia</option>
-        <option value="Viagens">Viagens</option>
-      </select>
-      <select id="locationFilter" class="px-4 py-2 border rounded shadow-sm">
-        <option value="all">Todos os locais</option>
-        <option value="Portugal">Portugal</option>
-        <option value="Brasil">Brasil</option>
-        <option value="França">França</option>
-      </select>
-      <select id="sortBy" class="px-4 py-2 border rounded shadow-sm">
-        <option value="az">A-Z</option>
-        <option value="za">Z-A</option>
-      </select>
+  <!-- ── Diretório ───────────────────────────────────── -->
+  <main class="max-w-6xl mx-auto px-4 py-10">
+
+    <!-- Filtros -->
+    <div class="filter-bar flex flex-col gap-3 mb-8">
+      <div class="icon-input">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" id="search" placeholder="Buscar por nome ou serviço…" class="w-full py-3" />
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <div class="icon-input flex-1 min-w-[160px]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"/><path d="M7 7h.01"/></svg>
+          <select id="filterCategory" class="w-full py-3">
+            <option value="">Todas as categorias</option>
+            <option value="Arte Marcial">Arte Marcial</option>
+            <option value="Artes">Artes</option>
+            <option value="Artesanato">Artesanato</option>
+            <option value="Bem Estar">Bem Estar</option>
+            <option value="Bordado">Bordado</option>
+            <option value="Cerâmica">Cerâmica</option>
+            <option value="Confeitaria">Confeitaria</option>
+            <option value="Contabilidade">Contabilidade</option>
+            <option value="Decoração">Decoração</option>
+            <option value="Design">Design</option>
+            <option value="Direito">Direito</option>
+            <option value="Estética">Estética</option>
+            <option value="Educação">Educação</option>
+            <option value="Fotografia">Fotografia</option>
+            <option value="Gastronomia">Gastronomia</option>
+            <option value="Imobiliária">Imobiliária</option>
+            <option value="Moda">Moda</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Marketing Digital">Marketing Digital</option>
+            <option value="Psicologia">Psicologia</option>
+            <option value="Tattoo">Tattoo</option>
+            <option value="Tecnologia">Tecnologia</option>
+            <option value="Viagens">Viagens</option>
+          </select>
+        </div>
+        <div class="icon-input flex-1 min-w-[140px]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <select id="locationFilter" class="w-full py-3">
+            <option value="all">Todos os locais</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Brasil">Brasil</option>
+            <option value="França">França</option>
+          </select>
+        </div>
+        <div class="icon-input flex-1 min-w-[120px]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 16 4 4 4-4"/><path d="M7 20V4"/><path d="m21 8-4-4-4 4"/><path d="M17 4v16"/></svg>
+          <select id="sortBy" class="w-full py-3">
+            <option value="az">A → Z</option>
+            <option value="za">Z → A</option>
+          </select>
+        </div>
+      </div>
     </div>
 
-    <!-- Cards -->
-    <div id="cards" class="grid gap-4 sm:grid-cols-2"></div>
+    <!-- Grid de cards -->
+    <div id="cards" class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
 
     <!-- Paginação -->
-    <div class="flex justify-center mt-8 space-x-2" id="pagination"></div>
+    <div class="flex justify-center gap-2 mt-10 flex-wrap" id="pagination"></div>
 
-    <section class="my-12 flex flex-col md:flex-row items-center gap-8 bg-yellow-50 p-6 rounded-lg shadow">
-      <img src="https://images.pexels.com/photos/7491159/pexels-photo-7491159.jpeg" alt="Grupo de mulheres unidas" class="w-full md:w-1/2 rounded-lg shadow-md">
-      <div class="text-center md:text-left md:w-1/2">
-        <h2 class="text-2xl md:text-3xl font-bold text-yellow-800 mb-2">Visibilidade é poder ✨</h2>
-        <p class="text-gray-700 text-lg">
-          Esta lista é feita por mulheres, para mulheres. <br class="hidden md:inline">
-          Ajude-nos a ampliar esse movimento com mais indicações, visibilidade e apoio mútuo.
+  </main>
+
+  <!-- ── Banner ──────────────────────────────────────── -->
+  <section class="max-w-6xl mx-auto px-4 pb-10">
+    <div class="cta-banner flex flex-col md:flex-row items-center gap-8 p-8 md:p-10">
+      <img
+        src="https://images.pexels.com/photos/7491159/pexels-photo-7491159.jpeg"
+        alt="Grupo de mulheres unidas"
+        class="w-full md:w-2/5 rounded-xl object-cover aspect-video md:aspect-auto md:h-56"
+      >
+      <div class="md:w-3/5">
+        <p class="text-xs font-semibold tracking-widest uppercase text-yellow-600 mb-2">Visibilidade é poder</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-stone-900 mb-3 leading-snug">
+          Feita por mulheres,<br>para mulheres ✨
+        </h2>
+        <p class="text-stone-600 mb-5 leading-relaxed">
+          Esta lista cresce com cada indicação. Ajude-nos a ampliar esse movimento — traga mais nomes, compartilhe o link e apoie quem está aqui.
         </p>
+        <a href="#formarelo" class="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition-colors shadow-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>
+          Indicar uma profissional
+        </a>
       </div>
-    </section>
-
-    <!-- Formulário para adicionar nova prestadora -->
-    <div class="max-w-4xl mx-auto px-4 ">
-      <h2 class="text-3xl font-bold mb-2 text-center">Faz parte desse movimento, mulher!</h2>
-      <p class="text-center mb-6 text-gray-600">
-      Solas somos fortes. <br>
-      Juntas somos imparáveis.
-    </p>
     </div>
-    <section id="formarelo" class="max-w-xl mx-auto my-6 p-6 bg-white rounded shadow">
-      
-      <h3 class="text-2xl font-bold mb-4">Adicionar novo serviço</h2>
-      <form id="addForm" class="space-y-4">
-        <input type="text" name="name" placeholder="Nome completo" class="w-full px-4 py-2 border rounded" required>
-        <input type="text" name="service" placeholder="Serviço oferecido" class="w-full px-4 py-2 border rounded" required>
-        <input type="text" name="category" placeholder="Categoria (ex: Educação, Design)" class="w-full px-4 py-2 border rounded" required>
-        <input type="text" name="location" placeholder="Local" class="w-full px-4 py-2 border rounded" required>
-        <input type="text" name="atendimento" placeholder="Atendimento (Online ou Presencial)" class="w-full px-4 py-2 border rounded" required>
-        <input type="text" name="link" placeholder="Link da página. Ex: https://instagram.com/seuperfil" class="w-full px-4 py-2 border rounded" required>
-        <button type="submit" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">Enviar</button>
+  </section>
+
+  <!-- ── Formulário ─────────────────────────────────── -->
+  <section id="formarelo" class="max-w-2xl mx-auto px-4 pb-16">
+    <div class="text-center mb-8">
+      <p class="text-xs font-semibold tracking-widest uppercase text-yellow-600 mb-2">Faça parte</p>
+      <h2 class="text-3xl font-bold text-stone-900 mb-2">Faz parte desse movimento!</h2>
+      <p class="text-stone-500">Solas somos fortes. Juntas somos imparáveis.</p>
+    </div>
+
+    <div class="bg-white border border-stone-100 rounded-2xl shadow-sm p-8">
+      <form id="addForm" class="grid sm:grid-cols-2 gap-4">
+        <input type="text" name="name"       placeholder="Nome completo"                         class="form-input" required>
+        <input type="text" name="service"    placeholder="Serviço oferecido"                     class="form-input" required>
+        <input type="text" name="category"   placeholder="Categoria (ex: Design, Educação)"      class="form-input" required>
+        <input type="text" name="location"   placeholder="Local (ex: Lisboa, Portugal)"          class="form-input" required>
+        <input type="text" name="atendimento" placeholder="Atendimento — Online ou Presencial"   class="form-input" required>
+        <input type="text" name="link"       placeholder="Link — https://instagram.com/…"        class="form-input" required>
+        <div class="sm:col-span-2 flex items-center justify-between gap-4 pt-1">
+          <button type="submit" class="btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>
+            Enviar para aprovação
+          </button>
+          <p id="successMessage" class="text-green-600 text-sm font-medium hidden">Enviado! Aguarde a aprovação 💛</p>
+        </div>
       </form>
-      <p id="successMessage" class="text-green-600 mt-4 hidden">Enviado com sucesso! Aguarde a aprovação. Obrigada 💛</p>
-    </section>
+    </div>
+  </section>
 
-    <!-- Rodapé -->
-    <footer class="mt-12 text-center text-sm text-gray-500">
-      <p>Quer adicionar alguém? Veja como <a href="contribute.md" class="text-yellow-500 underline">aqui</a>.</p>
-    </footer>
-  </div>
+  <!-- ── Footer ─────────────────────────────────────── -->
+  <footer class="site-footer py-8 px-4 text-center">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center justify-center gap-2 mb-3">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-yellow-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <span class="text-white font-semibold">AmarEla</span>
+      </div>
+      <div class="flex items-center justify-center gap-4 mb-3">
+        <a href="https://www.instagram.com/lista.amarela" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-stone-400 hover:text-yellow-400 transition-colors text-xs font-medium">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          @lista.amarela
+        </a>
+      </div>
+      <p class="text-stone-400 text-xs mb-1">
+        Idealizado por <a href="https://github.com/kakacordovil" class="font-medium">Ká Cordovil</a> com a força de todas que vieram antes.
+      </p>
+      <p class="text-stone-600 text-xs">
+        Quer adicionar alguém? Veja como <a href="contribute.md" class="font-medium">contribuir</a>.
+      </p>
+    </div>
+  </footer>
 
-  <!-- Script de lógica dos cards -->
+  <!-- ── Scripts ────────────────────────────────────── -->
   <script>
     let services = [];
 
@@ -139,22 +225,45 @@
     const paginationContainer = document.getElementById("pagination");
 
     let currentPage = 1;
-    const itemsPerPage = 4;
+    const itemsPerPage = 9;
 
     function renderCards(filtered) {
       cardsContainer.innerHTML = "";
       const start = (currentPage - 1) * itemsPerPage;
       const paginated = filtered.slice(start, start + itemsPerPage);
 
+      if (paginated.length === 0) {
+        cardsContainer.innerHTML = `<p class="col-span-full text-center text-stone-400 py-16">Nenhum resultado encontrado.</p>`;
+        return;
+      }
+
       for (const item of paginated) {
         const card = document.createElement("div");
-        card.className = "bg-white p-4 rounded shadow";
+        card.className = "service-card";
         card.innerHTML = `
-          <h3 class="text-lg font-semibold">${item.name}</h3>
-          <p class="text-sm text-gray-600">${item.service} (${item.category})</p>
-          <p class="text-sm text-gray-600"><strong>Local:</strong> ${item.location}</p>
-          <p class="text-sm text-gray-600"><strong>Atendimento:</strong> ${item.atendimento}</p>
-          <a href="${item.link}" target="_blank" class="text-yellow-600 hover:underline text-sm">Me encontre aqui</a>
+          <h3>${item.name}</h3>
+          <p style="display:flex;align-items:flex-start;gap:6px;font-size:.85rem;color:#78716c;margin:0">
+            <svg xmlns="http://www.w3.org/2000/svg" style="width:14px;height:14px;margin-top:2px;flex-shrink:0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            <span>${item.service}</span>
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:4px">
+            <span class="badge-yellow">
+              <svg xmlns="http://www.w3.org/2000/svg" style="width:10px;height:10px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"/><path d="M7 7h.01"/></svg>
+              ${item.category}
+            </span>
+            <span class="badge-gray">
+              <svg xmlns="http://www.w3.org/2000/svg" style="width:10px;height:10px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              ${item.location}
+            </span>
+            <span class="badge-gray">
+              <svg xmlns="http://www.w3.org/2000/svg" style="width:10px;height:10px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+              ${item.atendimento}
+            </span>
+          </div>
+          <a href="${item.link}" target="_blank" rel="noopener noreferrer" style="margin-top:auto;padding-top:8px;display:inline-flex;align-items:center;gap:6px;font-size:.85rem;font-weight:600;color:#d97706;text-decoration:none" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+            <svg xmlns="http://www.w3.org/2000/svg" style="width:13px;height:13px;flex-shrink:0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+            Me encontre aqui
+          </a>
         `;
         cardsContainer.appendChild(card);
       }
@@ -163,13 +272,15 @@
     function renderPagination(totalItems) {
       paginationContainer.innerHTML = "";
       const totalPages = Math.ceil(totalItems / itemsPerPage);
+      if (totalPages <= 1) return;
       for (let i = 1; i <= totalPages; i++) {
         const btn = document.createElement("button");
         btn.textContent = i;
-        btn.className = `px-3 py-1 border rounded ${i === currentPage ? 'bg-yellow-500 text-white' : 'bg-white text-gray-700'}`;
+        btn.className = `pagination-btn${i === currentPage ? ' active' : ''}`;
         btn.onclick = () => {
           currentPage = i;
           updateDisplay();
+          document.getElementById("cards").scrollIntoView({ behavior: "smooth", block: "start" });
         };
         paginationContainer.appendChild(btn);
       }
@@ -198,40 +309,24 @@
         );
       }
 
-      filtered.sort((a, b) => {
-        return order === "az"
+      filtered.sort((a, b) =>
+        order === "az"
           ? a.name.localeCompare(b.name)
-          : b.name.localeCompare(a.name);
-      });
+          : b.name.localeCompare(a.name)
+      );
 
       renderCards(filtered);
       renderPagination(filtered.length);
     }
 
-    searchInput.addEventListener("input", () => {
-      currentPage = 1;
-      updateDisplay();
-    });
-
-    filterCategory.addEventListener("change", () => {
-      currentPage = 1;
-      updateDisplay();
-    });
-
-    sortBy.addEventListener("change", () => {
-      currentPage = 1;
-      updateDisplay();
-    });
-
-    locationFilter.addEventListener("change", () => {
-      currentPage = 1;
-      updateDisplay();
-    });
+    searchInput.addEventListener("input", () => { currentPage = 1; updateDisplay(); });
+    filterCategory.addEventListener("change", () => { currentPage = 1; updateDisplay(); });
+    sortBy.addEventListener("change", () => { currentPage = 1; updateDisplay(); });
+    locationFilter.addEventListener("change", () => { currentPage = 1; updateDisplay(); });
 
     updateDisplay();
   </script>
 
-  <!-- Script do formulário -->
   <script>
     document.getElementById("addForm").addEventListener("submit", async function (e) {
       e.preventDefault();
@@ -243,7 +338,6 @@
         alert("Por favor, insira o link com http:// ou https://");
         return;
       }
-
 
       const response = await fetch("https://amarela.vercel.app/api/submit", {
         method: "POST",
@@ -259,30 +353,34 @@
       }
     });
   </script>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const menuBtn = document.getElementById('menuBtn');
       const menu = document.getElementById('menu');
+      const iconHam = document.getElementById('iconHam');
+      const iconX = document.getElementById('iconX');
       let menuAberto = false;
 
       menuBtn.addEventListener('click', () => {
         menu.classList.toggle('hidden');
         menuAberto = !menuAberto;
-        menuBtn.textContent = menuAberto ? '✖' : '☰';
+        iconHam.classList.toggle('hidden', menuAberto);
+        iconX.classList.toggle('hidden', !menuAberto);
       });
 
-      // Fecha o menu ao clicar em um link no mobile
-      const links = menu.querySelectorAll('a');
-      links.forEach(link => {
+      menu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
           if (window.innerWidth < 768) {
             menu.classList.add('hidden');
-            menuBtn.textContent = '☰';
+            iconHam.classList.remove('hidden');
+            iconX.classList.add('hidden');
             menuAberto = false;
           }
         });
       });
     });
   </script>
+
 </body>
 </html>
