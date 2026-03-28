@@ -8,3 +8,18 @@
 
 # Node (if anyone runs vercel dev or installs deps locally)
 node_modules/
+package-lock.json
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Claude Code local state
+.claude/ralph-loop.local.md
